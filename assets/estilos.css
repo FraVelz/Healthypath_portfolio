@@ -508,16 +508,21 @@ figure h1{
     object-fit: cover;
     background-color: white;
     padding: 10px;
-    opacity:1;
+    opacity:.8;
     transition: all ease .4s;
     border-radius: 18px;
-    filter: contrast(120%);
+}
+.carrusel_caps img:not(:hover){
+    filter: contrast(80%);
+    width: 80px;
 }
 
 .carrusel_caps img:hover{
+    opacity: 1;
     width: 80px;
-    scale:(1.2);
+    filter: contrast(120%);
     cursor: crosshair; 
+
 }
 .carrusel_caps img:nth-child(2), .carrusel_caps img:nth-child(4){
     background-color: #f5e9d4;
@@ -642,7 +647,7 @@ figure h1{
 .objetivo h4{
     background-color: #f7ad19;
     border-radius: 6px 6px 0 0;
-    color: var(--color-secondary-gray);
+    color: var(#f4eded);
     line-height: 35px;
     text-align: center;
     font-family: var(--semi-Bold-Popp);
