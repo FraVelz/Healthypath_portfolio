@@ -4,6 +4,9 @@
     box-sizing: border-box;
 
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body{
     background-color: rgb(245, 251, 255);
@@ -33,6 +36,7 @@ header{
 .title{
     font-family: "poppinsBold",Arial, Helvetica, sans-serif;
     font-weight: bold;
+    text-transform: uppercase;
 }
 
 
@@ -113,13 +117,17 @@ figure h1{
 /* aca empieza la informacion de introduccion, imagen, subtitulos, parrafos */
 .subtitle_welcome{
     font-family: "poppinsBold",Arial, Helvetica, sans-serif;
-    font-size:42px;
+    font-size:41px;
     /* padding: 10px; */
     color: whitesmoke;
     text-shadow: white 0 0 3px;
-    margin:40px 0 0 30px;
     height: 100px;
-    letter-spacing: 2px;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+    width: fit-content;
+    min-height: fit-content;
+    text-align: center;
+    margin:20px 0 0 30px;
 
 }
 
@@ -128,23 +136,26 @@ figure h1{
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* background-attachment: fixed; */
     height: 90dvh;
     animation: aparecer 3s;
     flex-wrap: wrap;
+    min-height: fit-content;
+    padding:30px 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 
 }
 .seccion_introduccion section{
-    row-gap: 15px;
     display: grid;
-    grid-template-rows:1fr 150px 100px;
+    grid-template-rows:150px 150px 100px;
+    row-gap: 20px;
 }
 
 .seccion_introduccion p{
     color: whitesmoke;
-    margin: 20px 0 0 30px;
+    margin: 20px 0 0 0;
     width: 480px;
-    letter-spacing: 2px;
     font-family: var(--Poppins);
 }
 
@@ -152,79 +163,67 @@ figure h1{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    height: fit-content;
+    margin:0 0 0 30px;
+
 }
 .contain_info_introduction article p{
-    font-size: 14px;
-    text-align: justify;
+    font-size: 16px;
+    text-align: center;
     line-height: 30px;
 
 }
 .contain_info_introduction article{    
-    margin:20px 18px;
     height: 120px;
 }
 .img_menu_principal{
-    width: 200px;
-    height:320px;
+    width: 280px;
+    height:460px;
     border-radius: 10px;
-    margin:0 0 0 100px;
     z-index: 1;
-    position: relative;
-    left: 60px;
-    bottom: 40px;
     transition: all ease .4s;
-    box-shadow: white 0 0 4px;
 
 }
 
-.nutritionview{
-    width: 180px;
-    height:280px;
-    border-radius: 10px;
-    margin:0px 0px 0 0;
-    z-index: 0;
-    bottom: 20px;
-    position: relative;
-    transition: all ease .5s;
-    box-shadow: white 0 0 5px;
-
-}
 
 .seccion_introduccion figure{
     display: flex;
-    margin-right: 30px;
+    height: 100%;
+    min-height: fit-content;
+    justify-content: end;
+    align-items: start;
+    margin-left: 10px;
 }
 
-.nutritionview:hover{
-    scale: 1.2;
-    transition: all ease .4s;
-    z-index: 1;
-    position: relative;
-    right:20px ;
-    box-shadow: white 0 0 10px;
-}
 
 .img_menu_principal:hover{
     scale: 1.04;
     transition: all ease .4s;
     z-index: 1;
-    box-shadow: white 0 0 10px;
+    filter: drop-shadow(0 0 10px whitesmoke);
 }
 
 .downloadApp{
     text-align: center;
     padding: 10px;
     width: 300px;
-    margin:60px 0 0 100px;
+    margin:40px 0 0 100px;
     border-radius: 10px;
     border:transparent;
     font-family: var(--semi-Bold-Popp);
-    letter-spacing: 2px;
+    letter-spacing: 1.3px;
     font-weight: bold;
     box-shadow: whitesmoke 0 0 10px;
     cursor: pointer;
+    font-size: 20px;
     color: #02202f;
     transition: all ease .4s;
+}
+.seccion_introduccion a{
+    display: flex;
+    justify-content: center;
+    width: fit-content;
+    text-decoration: none;
 }
 
 .downloadApp:hover{
@@ -411,14 +410,14 @@ figure h1{
     display: grid;
     grid-template-columns: 260px 1fr;
     height: 400px;
-    margin-top: 180px;
+    margin-top: 100px;
     min-height: fit-content;
     background-color: #02202f;
 }
 .funcion_healthypath header{
     padding: 10px;
-    font-family: var(--Poppins);
-    font-size: 15   px;
+    font-family: var(--semi-Bold-Popp);
+    font-size: 15px;
     z-index: 0;
     text-align: center;
     display: flex;
@@ -428,19 +427,18 @@ figure h1{
 
 .funcion_healthypath header h3{
     color: whitesmoke;
-    letter-spacing: 1px;
     text-transform: uppercase;
 }
 .funcion_healthypath article{
     background-color: white;
-    padding: 15px;
+    padding: 30px;
+    width: fit-content;
 }
 
 .funcion_healthypath p{
     margin: 10px 0 20px 0;
     text-align: justify;
     font-family: var(--Poppins);
-    letter-spacing: 1.5px;
     line-height: 28px;
     width:auto;
     font-size: 14px;
@@ -462,7 +460,7 @@ figure h1{
     background-color: #02202f;
     height: fit-content;
     padding:0 20px 20px 20px;
-    margin-top: 200px;
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -502,7 +500,7 @@ figure h1{
     
 }
 .carrusel_caps img{
-    width:0;
+    width:100%;
     height: 420px;
     flex-grow: 1;
     object-fit: cover;
@@ -535,7 +533,6 @@ figure h1{
     border-radius:25px  25px 25px 25px;
     color: #053952;
     position: absolute;
-    letter-spacing: 2px;
     font-family: var(--semi-Bold-Popp);
     margin: 30px 0 0 0;
     transform: translateY(50px);
@@ -562,21 +559,21 @@ figure h1{
     display: flex;
     place-content: center;
     background-color: rgb(220, 222, 225);
-    padding: 10px;
-    margin: 200px 0;
+    padding: 50px;
+    margin: 70px 0;
 }
 .key-points-box{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat(2,200px);
-    gap: 15px;
-    padding: 20px;
-
+    gap: 40px;
+    padding-bottom: 35px;
 }
 
 .box_infoimportant article{
     background-color:rgb(239, 236, 236);
     border-radius:20px ;
+    height: fit-content;
 }
 .subtitulo-boxinfo{
     grid-column:1;
@@ -587,31 +584,45 @@ figure h1{
     background-size: cover;
     backdrop-filter: blur(8px); 
     border-radius:6px 6px 20px 20px;
+    padding-block: 10px;
 }
 .subtitulo-boxinfo{
     color: whitesmoke;
     text-align: center;
-    font-size: 1.8em;
+    font-size: 1.5em;
     text-transform: uppercase;
     font-family: var(--semi-Bold-Popp);
     padding: 10px;
-    letter-spacing: 2px;
     min-height: fit-content;
 
 }
 .subtitulo-boxinfo img{
-    width: 100px;
-    height: 90px;
+    width: 90px;
+    height: 80px;
     background-color: whitesmoke;
     border-radius: 15px;
     object-fit: cover;
 }
 .objetivo{
     grid-column:2;
-    grid-row: 1 / 2;
     background-color: rgb(239, 236, 236);
     min-height: fit-content;
+}
+.objetivo article{
+    padding-inline: 20px;
+    height: fit-content;
+    height: 90%;
+    display: flex;
+    align-items: center;
 
+}
+.mision article, .vision article{
+    padding-inline: 20px;
+    height: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    line-height: 35px;
 }
 .mision{
     grid-column:1;
@@ -640,6 +651,7 @@ figure h1{
     font-size: 20px;
     letter-spacing: 2px;
     text-transform:uppercase ;
+    text-shadow: 0 0 1px darkslategray;
 }
 .mision h4{
     background-color: #2f9b61;
@@ -651,6 +663,8 @@ figure h1{
     font-size: 20px;
     letter-spacing: 2px;
     text-transform:uppercase ;
+    text-shadow: 0 0 1px darkslategray;
+
 }
 .vision h4{
     background-color:#02202f;
@@ -662,22 +676,19 @@ figure h1{
     font-size: 20px;
     letter-spacing: 2px;
     text-transform:uppercase ;
+    text-shadow: 0 0 1px darkslategray;
+
 }
 .vision p, .mision p, .objetivo ul{
     font-size: 15px;
     text-align: justify;
     font-family: var(--Poppins);
-    padding: 8px;
 }
 .objetivo ul li{
     margin: 8px 0;
     list-style: inside;}
 .vision p{
-    line-height: 32px;
-}
-#touch{
-    height: 20px;
-    width: 25px;
+    line-height: 35px;
 }
 .subtitulo_organigrama{
     padding: 20px;
@@ -686,7 +697,6 @@ figure h1{
     border-radius: 10px;
     font-family: var(--semi-Bold-Popp);
     color: #053952;
-    letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
     background-color: whitesmoke;
@@ -698,7 +708,7 @@ figure h1{
     justify-content: center;
     padding: 30px;
     background-color: lightblue;
-    margin-bottom: 200px;
+    margin-bottom: 90px;
 }
 
 .organigramaimg{
@@ -723,8 +733,9 @@ figure h1{
     background-color: white;
     padding:30px 20px;
     gap: 80px;
-    height: 600px;
+    height: 700px;
     min-height: fit-content;
+    min-width: fit-content;
 }
 .servicios{
     width: 90%;
@@ -740,6 +751,7 @@ figure h1{
     display: flex;
     flex-direction: column;
     width: 500px;
+    min-width: none;
     background-color: var(--color-secondary-gray);
     height: 90%;
     min-height: fit-content;
@@ -782,7 +794,6 @@ figure h1{
     font-size: 14px;
     text-align: start;
     padding: 14px;
-    letter-spacing: 1.2px;
     margin-top: 15px;
     line-height: 1.8;
     color: rgb(39, 32, 32);
@@ -817,7 +828,7 @@ footer .redes-sociales article{
     display: flex;
     justify-content: center;
     align-items: center;
-        min-height: fit-content;
+    min-height: fit-content;
 }
 .copy{
     width: 100%;
@@ -852,6 +863,9 @@ footer .redes-sociales article{
         cursor: pointer;
     }
 }
+.redes-sociales h4{
+    margin-bottom: 20px;
+}
 small{
     color: white;
     font-family: var(--Poppins);
@@ -871,16 +885,20 @@ small{
     letter-spacing: 1px;
     transition: all ease .4s;
 }
+.contact-box{
+    min-height: fit-content;
+    margin-top: 35px;
+}
+.contacto ul{
+    margin-top: 0px;
+}
 .contact-box a:hover{
     transform: scale(1.1);
     transition: all ease .4s;
     cursor: pointer;
     text-shadow: 0 0 5px whitesmoke;
 }
-/* .contact-box ul{
-    margin-left: 25px   ;
-} */
-.contact-box ul li{
+.contact-box nav li{
     margin: 8px 0;
     list-style-type:none;}
 /* animaciones e importacion de fuentes*/
@@ -985,19 +1003,45 @@ small{
 @media(max-width: 768px){
     body{
         overflow-x: hidden;
+        animation: aparecer 2s;
+        width: 100vw;
+        overflow-x: hidden;
     }
 
-    header{
-        
+    main{
+        width: 100vw;
+        overflow-x: hidden;
+    }
+    header{    
         align-items: center;
         text-align: center;
         justify-content: space-between;
-    }
+        height: fit-content;
+        padding: 2px;
+}
+    /* html{
+        scroll-behavior: unset;
+    } */ 
 
+    .title{
+        display: none;
+    }
     header figure h1{
-        font-size: 16px;
-        letter-spacing: 2px;
-        transform: translateY(9px);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .sobre_nosotros{
+        margin-right: 0px;
+        font-size: 12px;
+    }
+    .seccion_introduccion{
+        grid-template-columns: 1fr;
+        height: auto;
+        padding: 20px 30px;
+    }
+    .seccion_introduccion section{
+        grid-template-rows: auto;
+        row-gap: 10px;
     }
 
     .contain_info_introduction{
@@ -1005,43 +1049,45 @@ small{
         align-items: center;
         justify-content: center;
         padding: 10px;
+        margin: 0;
+        height: fit-content;
     }
-    .funcion_healthypath{
-        animation: aparecer 2s;
+    .contain_info_introduction article p{
+        font-size: 14px;
+        line-height: 24px;
+    }
+    .contain_info_introduction article{    
+        height: auto;
+        width: 100%;
+        margin: 10px 0;
+    }
+    /* .funcion_healthypath article, .funcion_healthypath header{
+        animation: aparecer 3s;
     }
     .funcion_healthypath p{
         animation: aparecer 3s;
-    }
-    .contain_info_icons{
-        margin-right: 0;
-        
-    }
-    .contain_info_icons a{
-        font-size: 12px;
-    }
+    } */
 
 
-    .contain_info_introduction figure{
+    .seccion_introduccion figure{
         display: none; /* ocultamos imágenes grandes en móvil */
     }
     .downloadApp{
         width: 100%;
-        margin: 20px auto;
         font-family: 'poppinsBold',Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        margin: 40px 0 0 0;
+    }
+    .seccion_introduccion a{
+        justify-content: center;
+        width: 100%;
     }
 
-    .img_menu_principal,
-    .nutritionview{
-        margin: 10px 0;
-        width: 150px;
-        height: auto;
-        position: static;
-    }
 
     .seccion_introduccion{
-        height: auto; /* que se ajuste al contenido */
+        height: auto; 
         padding: 20px 10px;
-        background-attachment: scroll; /* evita problemas en móvil */
+        background-attachment: scroll;
     }
 
     .seccion_introduccion p{
@@ -1055,87 +1101,235 @@ small{
     .subtitle_welcome{
         font-size: 28px;
         text-align: center;
-        margin: 10px auto;
+        margin: 20px auto;
+        margin-bottom: 0;
+
+    }
+    .funcion_healthypath{
+        grid-template-columns: 100%;
+        height: auto;
+        margin-top: 50px;
+        width: 100%;
+    }
+    .funcion_healthypath header{
+        padding: 10px;
+        font-size: 14px;
+        text-align: center;
+        justify-content: center;
+    }
+    .funcion_healthypath article{
+        padding: 20px;
+    }
+    .funcion_healthypath header h3{
+        width: fit-content;
+        text-align: center;
     }
 
     .funcion_healthypath p{
-        width: 100%;
+        width: fit-content;
         max-width: 320px;
-        font-size: 14px;
+        font-size: 13px;
         margin: 10px auto;
+        text-align: justify;
     }
-
-    .figOne, .figTwo, .figTree, .figFourth{
-        width: 70%;
-        height: auto;
-        margin: 15px auto;
-    }
-    .figOne h4, .figTwo h4, .figTree h4, .figFourth h4{
-        font-size: 14px;
+    .funcion_healthypath .img-user-figure{
+        padding: 0;
+        width: 100%;
+        > img{
+            border-radius: 0;
+            width: 100%;
+        }
+    }	
+    .dispone{
+        font-size: 20px;
         padding: 4px;
     }
+    .bento{
+        display: flex;
+        gap: 10px;
+        aspect-ratio: 10/16;
+        overflow-y: scroll;
+        position: relative;
+        width: auto;
+        scroll-snap-type:x mandatory;
+        overflow-y: hidden;
+        padding: 10px;
+        height: 450px;    
+    
+}
+    .bento img{
+        height: 120px;
+        width: auto;
+        object-fit: cover;
+        border-radius: 12px;
+        scroll-snap-align: center;
+    }
+    .item-1, .item-2, .item-3, .item-4, .item-5{
+        grid-column: unset;
+        grid-row: unset;
+        transform: unset;
+        height: fit-content;
+    }
+    .seccion_info{
+        padding: 0 10px;
+        margin-top: 50px;
+        height: fit-content;
+    }
+    .article-carrusel{
+        width: 100%;
+        margin-top: 20px;
+    }
+    .subtitulo_carrusel{
+        font-size: 16px;
+        margin: 30px 0;
+        text-align: center;
+        transform: translateY(60px);
 
+    }
+    .section_carrusel{
+        margin:  30px 0;
+        background-color: transparent;
+    }
+    .carrusel_caps{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        background-color: transparent;
+        row-gap: 10px;
+        flex-direction: column;
+
+    }
+    .carrusel_caps img{
+        height: 400px;
+        width: 100%;
+        flex-grow: unset;
+        margin: 5px 0;
+        padding: 20px;
+        object-fit: cover;
+    }
+    .carrusel_caps img:not(:hover){
+        filter: contrast(80%);
+        width: 230px;
+    }
+    .carrusel_caps img:hover{
+        width: 230px;
+        filter: contrast(120%);
+    }
+    
     .box_infoimportant{
         flex-direction: column;
         align-items: center;
-        margin: 20px auto;
+        height: fit-content;
+        width: fit-content;
+        margin: 50px auto;
     }
 
-    .box_infoimportant article{
-        width: 90%;
-        margin: 10px 0;
+    .key-points-box{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,auto);
+        width: 100%;
+        height: auto;
+        gap: 30px;
+        padding-bottom: 0;
     }
+    .objetivo, .mision, .vision{
+        grid-column: unset;
+        grid-row: unset;
+    }
+    .objetivo article, .mision article, .vision article{
+        padding: 25px;
+    }
+    .subtitulo-boxinfo{
+        font-size: 1em;
+        margin:-50px -50px 0 -50px;
+        border-radius: 0;
+        padding:10px;
 
+    
+    }
+    .subtitulo-boxinfo img{
+        width: 70px;
+        height: 60px;
+
+    }
+    .objetivo h4, .mision h4, .vision h4{
+        font-size: 15px;
+        padding: 10px 0;
+    }
+    .subtitulo_organigrama{
+        font-size: 18px;
+        padding:0;
+        margin: -30px -30px 0 -30px;
+        background-color: transparent;
+    }
+    .article-organigrama{
+        padding: 0;
+        margin-bottom: 50px;
+    }
     .organigramaimg img{
         width: 100%;
-        max-width: 320px;
+        border-radius: 0;
         height: auto;
+        /* box-shadow: 0 0 2px black; */
     }
 
-    .box_serv_sol{
-        flex-direction: column;
-        align-items: center;
-    }
 
     .servicios, .soluciones{
         width: 90%;
         height: auto;
-        margin: 15px 0;
+        border-radius: 0;
+        padding: 0;
     }
-
-    .carrusel_caps{
+    .service-img, .solution-img{
+        display: none;}
+    .servicios > article, .soluciones > article{
         width: 100%;
-        max-width: 320px;
         height: auto;
-        flex-direction: column;
+        border-radius: 0;
     }
 
-    .carrusel_caps img{
-        height: 180px;
-        width: 100%;
-        flex-grow: unset;
-        margin: 5px 0;
-    }
 
     footer h4{
         font-size: 16px;
         text-align: center;
+        letter-spacing: normal;
+    }
+    .contact-box{
+        margin-top: 17px;
+
+        > nav{
+            > a{
+                margin: 5px 0;
+                
+                > li{
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+    .redes-sociales h4{
+        font-size: 16px;
+        margin-bottom: 10px;
+
+        > article{
+            gap: 0 5px;
+            > a img{
+                width: 20px;
+                height: 20px;
+            }
+        }
     }
 
-    footer p{
+    footer small{
         font-size: 12px;
         text-align: center;
         text-indent: 0;
     }
-    .recomen_box h5, .activity_box h5,.nutrition_box h5, .menu_box h5, .sueno_box h5{
-        font-size: 16px;
-        margin-left: 10px;
+    .copy{
+        padding: 10px;
     }
     .subtitulo_carrusel,.subtitulo_organigrama{
         margin: 20px 13px;
 
-    }
-    .servicios p, .soluciones p{
-        font-weight: 800px;
     }
 }
